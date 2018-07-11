@@ -115,7 +115,7 @@ conn(
 | 排序       | order by                                                     |
 | 组合       | group by                                                     |
 | 限制       | limit                                                        |
-|            | having                                                       |
+|            | having和where区别                                            |
 
 
 ​										查询
@@ -232,15 +232,42 @@ delete from 字段名；
 ```
 
 ```mysql
-改
+改数据
 UPDATE 表名
     SET 字段名1=值1，[ ，字段名2=值2，…]
     [ WHERE 条件表达式 ]；
 例子：
 UPDATE student 
     SET name=‘caocao’,grade=50
-    WHERE id=1;　　　　　
+    WHERE id=1;
 ```
+
+```mysql
+当我们需要修改数据表名或者修改数据表字段时，就需要使用到MySQL ALTER命令。
+mysql> create table testalter_tbl
+    -> (
+    -> i INT,
+    -> c CHAR(1)
+    -> );
+    
+ALTER 命令及 DROP 子句来删除以上创建表的 i 字段：
+ALTER TABLE testalter_tbl  DROP i;
+ADD 子句来向数据表中添加列，如下实例在表 testalter_tbl 中添加 i 字段，并定义数据类型
+ALTER TABLE testalter_tbl ADD i INT;
+
+如果需要修改字段类型及名称, 你可以在ALTER命令中使用 MODIFY 或 CHANGE 子句 。	
+
+把字段 c 的类型从 CHAR(1) 改为 CHAR(10)，可以执行以下命令:
+mysql> ALTER TABLE testalter_tbl MODIFY c CHAR(10);
+
+使用 CHANGE 子句, 语法有很大的不同。 在 CHANGE 关键字之后，紧跟着的是你要修改的字段名，然后指定新字段名及类型。尝试如下实例：
+mysql> ALTER TABLE testalter_tbl CHANGE i j BIGINT;
+mysql> ALTER TABLE testalter_tbl CHANGE j j INT;
+修改表名
+ALTER TABLE testalter_tbl RENAME TO alter_tbl;
+```
+
+
 
 ```mysql
 对查询结果进行操作
