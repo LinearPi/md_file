@@ -6,7 +6,7 @@
 
 ​	可以设置一个计算图，TensorBoard来显示。
 
-![a+b](D:\md_file\备课的文档\md文档\images\a+b.png)  
+![a+b](images\a+b.png)  
 
 ​										  a + b 
 
