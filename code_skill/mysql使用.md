@@ -254,7 +254,6 @@ ALTER 命令及 DROP 子句来删除以上创建表的 i 字段：
 ALTER TABLE testalter_tbl  DROP i;
 ADD 子句来向数据表中添加列，如下实例在表 testalter_tbl 中添加 i 字段，并定义数据类型
 ALTER TABLE testalter_tbl ADD i INT;
-
 如果需要修改字段类型及名称, 你可以在ALTER命令中使用 MODIFY 或 CHANGE 子句 。	
 
 把字段 c 的类型从 CHAR(1) 改为 CHAR(10)，可以执行以下命令:

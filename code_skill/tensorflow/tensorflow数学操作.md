@@ -17,7 +17,7 @@ tensorflow数学操作代码，说明，数据类型
 | tf.表达式                   | 数学说明                                                |
 | --------------------------- | ------------------------------------------------------- |
 | tf.add_n(inputs, name=None) | 明智地添加所有输入张量元素 (inputs是一个同类型的数据组) |
-| tf.abs(x, name=None)        | 计算张量的绝对值。  即：$y=|x|$                         |
+| tf.abs(x, name=None)        | 计算张量的绝对值。  即：$y=                             |
 | tf.neg(x, name=None)        | 按元素计算数值负值。 即： $y=-x$                        |
 | tf.sign(x, name=None)       | 数字符号的元素指示 y : -1 x<0 elif 0 x=0 else 1 0<x     |
 | tf.inv(x, name=None)        | x元素的倒数 ,即 : $y = 1/x$                             |
@@ -52,46 +52,49 @@ tensorflow数学操作代码，说明，数据类型
 
 ##### 复数函数：
 
-tf.complex(real, imag, name=None)
-tf.complex_abs(x, name=None)
-tf.conj(in_, name=None)
-tf.imag(in_, name=None)
-tf.real(in_, name=None)
+| Tf.表达式                         | 数学说明 |
+| --------------------------------- | -------- |
+| tf.complex(real, imag, name=None) |          |
+| tf.complex_abs(x, name=None)      |          |
+| tf.conj(in_, name=None)           |          |
+| tf.imag(in_, name=None)           |          |
+| tf.real(in_, name=None            |          |
 
 ##### 减少：
 
-tf.reduce_sum(input_tensor, reduction_indices=None, keep_dims=False, name=None)
-tf.reduce_prod(input_tensor, reduction_indices=None, keep_dims=False, name=None)
-tf.reduce_min(input_tensor, reduction_indices=None, keep_dims=False, name=None)
-tf.reduce_max(input_tensor, reduction_indices=None, keep_dims=False, name=None)
-tf.reduce_mean(input_tensor, reduction_indices=None, keep_dims=False, name=None)
-tf.reduce_all(input_tensor, reduction_indices=None, keep_dims=False, name=None)
-tf.reduce_any(input_tensor, reduction_indices=None, keep_dims=False, name=None)
-tf.accumulate_n(inputs, shape=None, tensor_dtype=None, name=None)
-
-
+| tf表达式                                                     | 数学说明 |
+| ------------------------------------------------------------ | -------- |
+| tf.reduce_sum(input_tensor, reduction_indices=None, keep_dims=False, name=None) |          |
+| tf.reduce_prod(input_tensor, reduction_indices=None, keep_dims=False, name=None) |          |
+| tf.reduce_min(input_tensor, reduction_indices=None, keep_dims=False, name=None) |          |
+| tf.reduce_max(input_tensor, reduction_indices=None, keep_dims=False, name=None) |          |
+| tf.reduce_mean(input_tensor, reduction_indices=None, keep_dims=False, name=None) |          |
+| tf.reduce_all(input_tensor, reduction_indices=None, keep_dims=False, name=None) |          |
+| tf.reduce_any(input_tensor, reduction_indices=None, keep_dims=False, name=None) |          |
+| tf.accumulate_n(inputs, shape=None, tensor_dtype=None, name=None) |          |
 
 ##### 分割：
 
-tf.segment_sum(data, segment_ids, name=None)
-tf.segment_prod(data, segment_ids, name=None)
-tf.segment_min(data, segment_ids, name=None)
-tf.segment_max(data, segment_ids, name=None)
-tf.segment_mean(data, segment_ids, name=None)
-tf.unsorted_segment_sum(data, segment_ids, num_segments, name=None)
-tf.sparse_segment_sum(data, indices, segment_ids, name=None)
-tf.sparse_segment_mean(data, indices, segment_ids, name=None)
-
-
-
-
+| tf表达式                                                     | 数学说明 |
+| ------------------------------------------------------------ | -------- |
+| tf.segment_sum(data, segment_ids, name=None)                 |          |
+| tf.segment_prod(data, segment_ids, name=None)                |          |
+| tf.segment_min(data, segment_ids, name=None)                 |          |
+| tf.segment_max(data, segment_ids, name=None)                 |          |
+| tf.segment_mean(data, segment_ids, name=None)                |          |
+| tf.unsorted_segment_sum(data, segment_ids, num_segments, name=None) |          |
+| tf.sparse_segment_sum(data, indices, segment_ids, name=None) |          |
+| tf.sparse_segment_mean(data, indices, segment_ids, name=None) |          |
 
 ##### 序列比较和索引:
 
-tf.argmin(input, dimension, name=None)
-tf.argmax(input, dimension, name=None)
-tf.listdiff(x, y, name=None)
-tf.where(input, name=None)
-tf.unique(x, name=None)
-tf.edit_distance(hypothesis, truth, normalize=True, name='edit_distance')
-tf.invert_permutation(x, name=None)
+| tf表达式                                                     | 数学说明 |
+| ------------------------------------------------------------ | -------- |
+| tf.argmin(input, dimension, name=None)                       |          |
+| tf.argmax(input, dimension, name=None)                       |          |
+| tf.listdiff(x, y, name=None)                                 |          |
+| tf.where(input, name=None)                                   |          |
+| tf.unique(x, name=None)                                      |          |
+| tf.edit_distance(hypothesis, truth, normalize=True, name='edit_distance') |          |
+| tf.invert_permutation(x, name=None)                          |          |
+
